@@ -1,0 +1,55 @@
+---
+---
+
+.w_85{
+	width: 85%;
+}
+
+.my_bg{
+	background-color: #e01a22;
+}
+
+#logo{
+	font-weight: 900;
+}
+
+
+/*
+.tick:before
+{content:'\2713';
+  display:inline-block;
+  color:black;
+  padding:0 6px 0 0;
+  }
+ */
+
+.tick {
+	height: 1.2em;
+    width: 0.6em;
+    border: solid #FFFFFF;
+    border-width: 0px 4px 4px 0px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    display: inline-block;
+    margin: 5px .8em 0px 2px;
+}
+
+ .shadow{
+ 	box-shadow: 12px 12px 6px #888888;
+ }
+
+ .overflow_wrap{
+ 	white-space: normal;
+ }
+
+ #img_main{ 	
+ 	height:400px;
+ }
+
+ .bg_logo{
+ 	background-repeat: no-repeat;
+ 	background-image: url("{{site.baseurl}}/assets/images/logo2.png");
+ 	background-size: auto 100%;
+ 	background-position: 3% 0;
+ }

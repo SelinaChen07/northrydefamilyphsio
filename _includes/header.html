@@ -1,0 +1,32 @@
+<header>
+
+	<nav class="navbar navbar-expand-md my_bg navbar-dark px-0">
+		
+
+			<!-- logo -->
+				<a class="navbar-brand ml-lg-5 pl-lg-5 mr-auto ml-3 pl-3 ml-sm-5" id="logo" href="{{ site.url }}">
+					<div>NORTH RYDE</div>
+					<div>FAMILY</div>
+					<div>PHYSIOTHERAPY</div>
+				</a>
+
+				<!-- Toggler/collapsibe Button -->
+				<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				    <span class="navbar-toggler-icon"></span>
+				</button>					
+			
+
+			<!-- Navbar links -->
+	  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav ml-auto mr-lg-5 pr-lg-5 mr-md-3">
+					<li class="nav-item"><a class="nav-link text-white {% if page.location == 'home' %} font-weight-bold {% endif %}" href="{{ site.url }}">Home</a></li>
+					<li class="nav-item"><a class="nav-link text-white {% if page.title == 'About' %} font-weight-bold {% endif %}" href="{{site.baseurl}}/about/">About Us</a></li>
+					<li class="nav-item"><a class="nav-link text-white {% if page.title == 'Services' %} font-weight-bold {% endif %}" href="#">Services</a></li>
+					<li class="nav-item"><a class="nav-link text-white {% if page.title == 'Contact us' %} font-weight-bold {% endif %}" href="#">Contact Us</a></li>
+				</ul>
+			</div>
+
+		
+	</nav>
+
+</header>
