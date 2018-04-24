@@ -19,8 +19,8 @@
 			<!-- Navbar links -->
 	  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav ml-auto mr-lg-5 pr-lg-5 mr-md-3">
-					<li class="nav-item"><a class="nav-link text-white {% if page.location == 'home' %} font-weight-bold {% endif %}" href="{{ site.url }}">Home</a></li>
-					<li class="nav-item"><a class="nav-link text-white {% if page.title == 'About' %} font-weight-bold {% endif %}" href="/about/">About Us</a></li>
+					<li class="nav-item"><a class="nav-link text-white {% if page.location == 'home' %} font-weight-bold {% endif %}" href="{{ site.baseurl }}">Home</a></li>
+					<li class="nav-item"><a class="nav-link text-white {% if page.title == 'About' %} font-weight-bold {% endif %}" href="{{"/about/" | relative_url }}">About Us</a></li>
 					<li class="nav-item"><a class="nav-link text-white {% if page.title == 'Services' %} font-weight-bold {% endif %}" href="#">Services</a></li>
 					<li class="nav-item"><a class="nav-link text-white {% if page.title == 'Contact us' %} font-weight-bold {% endif %}" href="#">Contact Us</a></li>
 				</ul>
