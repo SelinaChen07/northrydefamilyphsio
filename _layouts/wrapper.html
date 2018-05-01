@@ -9,7 +9,7 @@
     </title>
        
     <!-- Add icon -->
-    <link rel="shortcut icon" href="/assets/images/logo.jpg" type="image/jpg">
+    <link rel="shortcut icon" href="{{"/assets/images/logo.jpg" | relative_url }}" type="image/jpg">
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
@@ -26,9 +26,9 @@
   	
     {% include header.html %}
     
-    <div class="w_85 mx-auto ">
-	    {{ content }}
-    </div>
+    
+	  {{ content }}
+    
 
     {% include footer.html %}
 

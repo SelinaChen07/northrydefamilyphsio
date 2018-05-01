@@ -1,28 +1,42 @@
 <header>
 
-	<nav class="navbar navbar-expand-md my_bg navbar-dark px-0">
+	<nav class="navbar navbar-expand-md bg_my navbar-dark px-0">
 		
 
 			<!-- logo -->
-				<a class="navbar-brand ml-lg-5 pl-lg-5 mr-auto ml-3 pl-3 ml-sm-5" id="logo" href="{{ site.url }}">
+				<a class="navbar-brand ml-lg-5 pl-lg-5 ml-3 pl-3" id="logo" href="{{ site.url }}">
 					<div>NORTH RYDE</div>
 					<div>FAMILY</div>
 					<div>PHYSIOTHERAPY</div>
 				</a>
 
 				<!-- Toggler/collapsibe Button -->
-				<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 				    <span class="navbar-toggler-icon"></span>
 				</button>					
 			
 
 			<!-- Navbar links -->
 	  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-				<ul class="navbar-nav ml-auto mr-lg-5 pr-lg-5 mr-md-3">
-					<li class="nav-item"><a class="nav-link text-white {% if page.location == 'home' %} font-weight-bold {% endif %}" href="{{ site.baseurl }}">Home</a></li>
+				<ul class="navbar-nav ml-md-auto mr-lg-5 pr-lg-5 mr-3 ml-3 pl-3">
+					<li class="nav-item"><a class="nav-link text-white {% if page.location == 'home' %} font-weight-bold {% endif %}" href="{{ site.url }}">Home</a></li>
 					<li class="nav-item"><a class="nav-link text-white {% if page.title == 'About' %} font-weight-bold {% endif %}" href="{{"/about/" | relative_url }}">About Us</a></li>
-					<li class="nav-item"><a class="nav-link text-white {% if page.title == 'Services' %} font-weight-bold {% endif %}" href="#">Services</a></li>
-					<li class="nav-item"><a class="nav-link text-white {% if page.title == 'Contact us' %} font-weight-bold {% endif %}" href="#">Contact Us</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle text-white {% if page.title == 'Services' %} font-weight-bold {% endif %}" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+					    <div class="dropdown-menu">
+					    	{% for service in site.data.services %}
+					    		 <a class="dropdown-item overflow_wrap border" href="#">{{service.name}}</a>
+					    	{% endfor %}
+					    <!--
+					      <a class="dropdown-item" href="#">Action</a>
+					      <a class="dropdown-item" href="#">Another action</a>
+					      <a class="dropdown-item" href="#">Something else here</a>
+					      <div class="dropdown-divider"></div>
+					      <a class="dropdown-item" href="#">Separated link</a>
+					      -->
+					    </div>
+					</li>
+					<li class="nav-item"><a class="nav-link text-white {% if page.title == 'Contact Us' %} font-weight-bold {% endif %}" href="{{"/contact/" | relative_url }}">Contact Us</a></li>
 				</ul>
 			</div>
 

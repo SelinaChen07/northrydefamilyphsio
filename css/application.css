@@ -5,7 +5,7 @@
 	width: 85%;
 }
 
-.my_bg{
+.bg_my{
 	background-color: #e01a22;
 }
 
@@ -13,7 +13,14 @@
 	font-weight: 900;
 }
 
-
+@media (min-width: 1200px) {
+.img_middle{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	}
+}
 /*
 .tick:before
 {content:'\2713';
@@ -39,12 +46,17 @@
  	box-shadow: 12px 12px 6px #888888;
  }
 
+ .shadow_red{
+ 	box-shadow: 6px 6px 3px #e01a22;
+ }
+
  .overflow_wrap{
  	white-space: normal;
  }
 
  #img_main{ 	
- 	height:400px;
+ 	width: 100%;
+ 	height: auto;
  }
 
  .bg_logo{
@@ -53,3 +65,8 @@
  	background-size: auto 100%;
  	background-position: 3% 0;
  }
+
+ .required::after{
+  content:" *";
+  color:red;
+}
