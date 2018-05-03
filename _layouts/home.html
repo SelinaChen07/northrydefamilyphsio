@@ -1,24 +1,164 @@
 ---
 layout: wrapper
 ---
+<!-- Banner Area -->
+<section class="cover_page" id="home">
+	<!-- Cover photo is communicating to customers -->
+	<div class="cover_title mx-auto h-100 d-flex justify-content-center align-items-center flex-column text-center p-4">
+	<!-- Our vision, a sentence that talk to our valued customer -->
+		<h1 class="font-weight-bold">We work with you to a better life</h1>
+	<!-- How to achieve the vision -->
+		<p class="lead"> We provides home-based and function-focused physiotherapy and rehabilitation to help patients recover from stroke, surgery, fall, birth, cadiac episode, and lung infection.</p>
+	</div>	
+</section>
+<!-- End banner Area -->	
+
+<!-- Start we-offer Area -->
+<section class="pt-5 bg-light" id="services">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="pb-3 col-lg-10 text-center">
+				<h2 class="mb-2 font-weight-bold">Our Specialties</h2>
+				<p class="text-danger">Home-visit and home-based rehabilitation is our area of speciality.</p>
+			</div>
+		</div>						
+		<div class="row">
+			{% for service in site.data.services %}
+				<!--
+				<div class="col-lg-6">
+				<div class="font-italic btn btn-danger btn-lg btn-block shadow overflow_wrap mb-3 text-left w_85 mx-auto"><span class="tick"></span>{{service.name}}</div>
+				</div>
+				-->
+
+				<div class="col-lg-6 d-flex flex-row pb-3">
+					<div class="btn btn-danger rounded-circle tick_container mr-2">
+						<span class="tick"></span>
+					</div>
+					<div class="">
+						<h4 class="">{{service.name}}</h4>
+						<p class="text-muted">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+						</p>
+						<div class="btn btn-danger">View details >></div>
+					</div>
+				</div>
+			
+			{% endfor %}																
+		</div>
+	</div>	
+</section>
+<!-- End we-offer Area -->
+
+<!-- Start about-us Area -->
+<section class="py-5 " id="about_us">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="pb-3 col-lg-10 text-center">
+				<h2 class="mb-2 font-weight-bold">Who We Are</h2>
+				<p class="text-danger">We strive to maximise our patients’ quality of life.</p>
+			</div>
+		</div>						
+		<div class="row">
+			<div class="col-lg-10 col-12">
+				<p>North Ryde Family Physio is a family-run physiotherapy company that aims to provide the best possible health care to our local communities. Whether you suffer from chronic pain, an acute injury, or want effective rehabilitation and training for sport, we’re here to help!</p>
+				<p>We provide physiotherapy services and solutions for a number of well established facilities including medical centres, nursing homes, corporate companies and so on.</p>
+				<p>We are conveniently located in a number of busy locations throughout Sydney to best suit your needs. We understand that every presentation is not the same, and our physios are trained to treat all aspects of your health in a comprehensive manner to ensure you are completely satisfied with your health.</p>
+			</div>
+			<div class="col-lg-2 d-none d-lg-inline-block">
+				<img src="{{"/assets/images/logo2.png"|relative_url}}" class="w-100 ">
+			</div>																
+		</div>
+		<div><button class="btn btn-danger"><a href="{{"/about/" | relative_url }}" class="text-white">More About Us >></a></button></div>
+	</div>	
+</section>
+<!-- End about-us Area -->
+
+<!-- Start contact-us Area -->
+<section class="pt-5 pb-3 bg-secondary" id="contact_us">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-3 p-3">
+				<h5 class="font-weight-bold">Office Hours</h5>
+				<div class="">
+					<ul class="d-inline-block list-unstyled font-weight-bold">
+						<li>Monday</li>
+						<li>Tuesday</li>
+						<li>Wednesday</li>
+						<li>Thursday</li>
+						<li>Friday</li>
+						<li>Saturday</li>			
+					</ul>	
+					<ul class="d-inline-block list-unstyled">
+						<li>9am - 5pm</li>
+						<li>9am - 5pm</li>
+						<li>9am - 5pm</li>
+						<li>9am - 5pm</li>
+						<li>9am - 5pm</li>
+						<li>9am - 5pm</li>			
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-xl-5 p-3">
+				<h5 class="font-weight-bold">Home Visit Hours</h5>
+				<div class="">
+					<ul class="d-inline-block list-unstyled font-weight-bold">
+						<li>Tuesday</li>
+						<li>Friday</li>
+						<li>Home Visit Areas</li>							
+					</ul>	
+					<ul class="d-inline-block list-unstyled">
+						<li>9am - 5pm</li>
+						<li>9am - 5pm</li>		
+						<li>North Ryde, East Ryde and Ryde suburbs</li>			
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-xl-4 p-3">
+				<h5 class="font-weight-bold">Contact Us</h5>
+				<div class="">
+					<ul class="d-inline-block list-unstyled font-weight-bold">
+						<li>Phone</li>
+						<li>Mobile</li>
+						<li>Email</li>
+						<li>Address</li>							
+					</ul>	
+					<ul class="d-inline-block list-unstyled">
+						<li>(02) 8819 4339</li>
+						<li>0450 588 670</li>
+						<li>info@northrydefamilyphysio.com.au</li>
+						<li>263 Rowe St, Eastwood, NSW 2122</li>										
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
+<!-- End contact-us Area -->
+
+
+<!--
 <div class="w_85 mx-auto mb-5">
+
 	<section class="my-3 row">
 		<div class="col-xl-4">
 			<h4 class="font-weight-bold">Our Specialties</h4>
 			{% for service in site.data.services %}
 				<div class="font-italic btn btn-danger btn-lg btn-block shadow overflow_wrap mb-3 text-left"><span class="tick"></span>{{service.name}}</div>
 			{% endfor %}
-			<!--
+			
 			<div class="font-italic btn btn-danger btn-lg btn-block shadow overflow_wrap mb-3 text-left"><span class="tick"></span>Stroke, Parkinsons and other Neurological Rehabilitation</div>
 			<div class="font-italic btn btn-danger btn-lg btn-block shadow overflow_wrap mb-3 text-left"><span class="tick"></span>Women's Health and Postnatal Care</div>
 			<div class="font-italic btn btn-danger btn-lg  btn-block shadow overflow_wrap mb-3 text-left"><span class="tick"></span>Paediatric Physiotherapy</div>
 			<div class="font-italic btn btn-danger btn-lg btn-block shadow overflow_wrap mb-3 text-left"><span class="tick"></span>Cardiopulmonary Rehabilitation</div>	
-			-->	
+			
 		</div>
 		<div class="text-center col-xl-8 position-relative">
 			<img src={{"/assets/images/main.jpg" | relative_url}} class="img-fluid img_middle" id="img_main">
 		</div>
 	</section>
+
 
 	<div class="row">
 		<div class="col-lg-8" >
@@ -105,3 +245,4 @@ layout: wrapper
 		
 	</div>
 </div>
+-->

@@ -1,6 +1,28 @@
 ---
 ---
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.cover_page {
+    /* The image used */
+    background-image: url("{{"/assets/images/cover.jpeg"|relative_url}}");
+
+    /* Full height */
+    height: 55%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cover_title{
+  max-width: 42em;
+}
+
 .w_85{
 	width: 85%;
 }
@@ -42,6 +64,12 @@
     margin: 5px .8em 0px 2px;
 }
 
+.tick_container{
+  height: 3em;
+  width: 3em;
+  
+}
+
  .shadow{
  	box-shadow: 12px 12px 6px #888888;
  }
@@ -63,7 +91,7 @@
  	background-repeat: no-repeat;
  	background-image: url("{{"/assets/images/logo2.png"|relative_url}}");
  	background-size: auto 100%;
- 	background-position: 3% 0;
+ 	background-position: 3% 0%;
  }
 
  .required::after{
