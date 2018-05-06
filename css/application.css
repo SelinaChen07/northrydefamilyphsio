@@ -12,6 +12,7 @@ body, html {
 
     /* Full height */
     height: 55%; 
+    min-height: 420px;
 
     /* Center and scale the image nicely */
     background-position: center;
